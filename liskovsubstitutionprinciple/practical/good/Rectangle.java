@@ -5,10 +5,12 @@ public class Rectangle {
 	private double height;
 
 	public Rectangle(double width, double height) {
-		super();
 		this.width = width;
 		this.height = height;
 	}
+
+	// notice : the idea is to not use explicit setHeight,setWidth methods which might cause issues
+	// thus, we use constructor to set it and only get methods are present. This will make sure the issue we // //// noticed in bad example does not happen 
 
 	public double getWidth() {
 		return width;
@@ -18,7 +20,7 @@ public class Rectangle {
 		return height;
 	}
 
-	public double area() {
+	public double computeArea() {
 		return width * height;
 	}
 

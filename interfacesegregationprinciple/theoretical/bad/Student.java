@@ -1,28 +1,32 @@
-public interface Study {
+public interface BookInfo {
     
-    void writeExam();
-    void writeResearchThesis();
+    void getAuthor();
+    void getWhoseLifeIsBookOn();
 }
 
 // below classes are kept here for readability
 
-public class Student implements Study {
-    public void writeExam() {
-        // write your exam
+public class NovelInfo implements BookInfo {
+    public void getAuthor() {
+        // get author from db and return
     }
-    public void writeResearchThesis() {
-        throw new IllegalStateException("not all students can write a grad research thesis");
-    }
-}
-
-
-public class UnderGraduateStudent extends Student {
-    @Override
-    public void writeResearchThesis() {
-        // write a thesis
+    public void getWhoseLifeIsBookOn() {
+        throw new IllegalStateException("not all books are biographies");
     }
 }
 
-// as you can see that anyone implementing the Study interface is forced to 
-// implement the "writeResearchThesis" method which might not even be required
+
+public class AutobiographyInfo implements BookInfo {
+
+    public void getAuthor() {
+    
+    }
+
+    public void getWhoseLifeIsBookOn() {
+        // get from db and return
+    }
+}
+
+// as you can see that anyone implementing the BookInfo interface is forced to 
+// implement the "getWhoseLifeIsBookOn" method which might not even be required
 // that is why it violates ISP

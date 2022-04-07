@@ -1,9 +1,8 @@
 
-public class Product {
+public abstract class Book {
 
 	private String name;
 	private double price;
-	private String type;
 
 	public String getName() {
 		return name;
@@ -21,12 +20,10 @@ public class Product {
 		this.price = price;
 	}
 
-	public String getType() {
-		return type;
-	}
+	/**
+	 * this can be implemented by the specific book which we extend from this abstract book class
+	 */
+	public abstract double calculateTaxIncludedPrice();
 
-	public void setType(String type) {
-		this.type = type;
-	}
 
 }

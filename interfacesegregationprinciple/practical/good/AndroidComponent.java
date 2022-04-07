@@ -1,18 +1,13 @@
 
-public class AndroidComponent implements TouchUIComponent {
+public class AndroidComponent implements TouchComponent {
 
-	public void touch(String event) {
-		System.out.println("Touch Event Fired");
+	public void pinch(String event) {
+		System.out.println("Pinch Event Fired");
 
 	}
 
 	public void swipe(String event) {
 		System.out.println("Swipe Event Fired");
-
-	}
-
-	public void validate() {
-		System.out.println("All UI is valid");
 
 	}
 

@@ -2,23 +2,20 @@
 public class DesktopComponent implements Component {
 
 	public void mouseover(String event) {
-		System.out.println("Mouse click Event Fired");
+		System.out.println("Mouse over event fired");
+
+	}
+	public void clickCursor(String event) {
+		System.out.println("mouse click event fired");
 
 	}
 
-	public void touch(String event) {
-		throw new UnsupportedOperationException("touch not supported");
+	public void pinch(String event) {
+		throw new UnsupportedOperationException("pinch not supported");
 
 	}
-
 	public void swipe(String event) {
 		throw new UnsupportedOperationException("swipe not supported");
-
-	}
-
-	public void validate() {
-		System.out.println("All UI is valid");
-
 	}
 
 }

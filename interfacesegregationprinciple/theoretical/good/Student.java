@@ -1,21 +1,24 @@
-public interface ExamAble {
-    void writeExam();
+public interface AuthorAble {
+    void getAuthor();
 }
 
-public interface ThesisAble {
-    void writeResearchThesis();
+public interface BiographyAble {
+    void getWhoseLifeIsBookOn();
 }
 
 // all classes/interfaces are kept in one file here for readability
 
-public class Student implements ExamAble {
-    public void writeExam() {
-        // write a exam
+public class NovelInfo implements AuthorAble {
+    public void getAuthor() {
+        // get from db and return
     }
 }
 
-public class UnderGraduateStudent extends Student implements ThesisAble {
-    public void writeResearchThesis() {
-        // write a thesis
+public class AutobiographyInfo implements AuthorAble,BiographyAble  {
+    public void getAuthor() {
+        // get from db and return
+    }
+    public void getWhoseLifeIsBookOn() {
+        // get and return
     }
 }

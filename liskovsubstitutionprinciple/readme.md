@@ -2,7 +2,7 @@
 
 “Objects in a program should be replaceable with instances of their subtypes without altering the correctness of that program.”
 
-In simple words, if class B is extending class A, we should be able to replace A with B, without causing any bugs in the program.
+In simple words, if class B is extending class A, we should be able to replace A with B(for eg. in method `execute` shown below), without causing any bugs in the program.
 
 ```java
 class A{
@@ -22,7 +22,7 @@ public void execute(A objectA){
 
 ```
 
-"is A" relationship is a good estimate to find if inheritance is applicable or not, but Liskov principle mandates to use this with a careful consideration. We should only use inheritance if our super class is replaceable with a sub class in all the instances. Famous example for Square "is A" rectangle is demonstrated in practical example.
+**is A** relationship is a good estimate to find if inheritance is applicable or not, but Liskov principle mandates to use this with a careful consideration. We should only use inheritance if our super class is replaceable with a sub class in all the instances. Ostrich "is A" Bird mistake is shown in the theoretical example and a popular famous example of Square "is A" rectangle is demonstrated in practical example. 
 
 Refer to this [stack overflow thread](https://stackoverflow.com/questions/56860/what-is-an-example-of-the-liskov-substitution-principle) to understand more.
 

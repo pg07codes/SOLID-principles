@@ -20,7 +20,7 @@ public class Rectangle {
 		this.height = height;
 	}
 
-	public double area() {
+	public double computeArea() {
 		return width * height;
 	}
 
