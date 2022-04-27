@@ -17,12 +17,14 @@ class B extends A{
 public void execute(A objectA){
     A.doSomething();
     // So, in simple words, LSP says
-    // objectA can hold reference of type A or a reference to its child B, doSomehing should behave same.
+    // objectA can hold reference of type A or a reference to its child B, `execute` should behave same.
 }
 
 ```
 
-**is A** relationship is a good estimate to find if inheritance is applicable or not, but Liskov principle mandates to use this with a careful consideration. We should only use inheritance if our super class is replaceable with a sub class in all the instances. Ostrich "is A" Bird mistake is shown in the theoretical example and a popular famous example of Square "is A" rectangle is demonstrated in practical example. 
+**is A** relationship is a good estimate to find if inheritance is applicable or not, but Liskov principle mandates to use this with a careful consideration. We should only use inheritance if our super class is replaceable (has similar behaviour) with a sub class in all the instances. Ostrich "is A" Bird mistake is shown in the theoretical example and a popular famous example of Square "is A" rectangle is demonstrated in practical example. 
+
+*another mistake is shown using example in [this baeldung post](https://www.baeldung.com/java-liskov-substitution-principle) where each account is treated as if we can withdraw from it(proving that inheritance should happen not only based on `is-a` relationship but only when both parent and child has same behaviours)*
 
 Refer to this [stack overflow thread](https://stackoverflow.com/questions/56860/what-is-an-example-of-the-liskov-substitution-principle) to understand more.
 

@@ -2,6 +2,8 @@
 
 **DIP** states that High-level modules should not depend on low-level modules. Both should depend on abstractions. Abstractions should not depend upon details. In other words, A class should depend on abstraction(interfaces and abstract classes) and not on concretion (classes).This principle reduces tight coupling in the system.
 
+*[this baeldung post](https://www.baeldung.com/java-liskov-substitution-principle) explains open/closed princi. and liskovs princi. but will show you how DIP is connected with them. In the eg., we see that `BankingAppWithdrawalService ` should not depend on concrete account types but on abstract account*
+
 > Note: Both practical and theoretical examples for this have very much "practical" usage. One should must refer to both of the example folders.
 
 Also, here we need to clarify a common misconception and doubt a lot of beginners have.

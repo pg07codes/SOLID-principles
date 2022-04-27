@@ -18,12 +18,13 @@ public class Square extends Rectangle {
 // Now we see where this will cause issues. below is *someMethod* in some class
 class SomeClass{
 	public void someComplexMethod(Rectangle rectangle){
-		rectangle.setHeight(getHeightFromSomeAPI());
-		rectangle.setWidth(getWidthFromSomeAPI());
-		// .
-		// . something happening ...grrr ..ggrr
+		System.out.println("Old height is " + rectangle.getHeight());
+		rectangle.setHeight(getUpdatedHeightFromSomeAPI());
+		System.out.println("Old width is " + rectangle.getWidth()); // wont work as expected for square
+		rectangle.setHeight(getUpdatedWidthFromSomeAPI());
+		
 	
-		return rectangle.computeArea(); // this wont work as expected if rectangle is an instance of `square` as setWidth will override the value setHeight `set` which might not be desirable
+	    // this wont work as expected if rectangle is an instance of `square` as setHeight will override the width also which we could not print out to user then
 	}
 }
 
